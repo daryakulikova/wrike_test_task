@@ -114,12 +114,11 @@ public class FirstTest {
         String icon = driver.findElement(By.xpath("(//a[contains(@class, 'wg-footer__social-link')])[1]")).getAttribute("innerHTML");
         icon = icon.substring(icon.lastIndexOf("href=")+6, icon.indexOf("\"></use>"));
 
-        System.out.println(icon);
         Assert.assertEquals("/content/themes/wrike/dist/img/sprite/vector/footer-icons.symbol.svg?v2#twitter", icon);
 
     }
     @After
     public void Close() {
-        //driver.quit();
+        driver.quit();
     }
 }
